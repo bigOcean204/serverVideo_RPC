@@ -1,0 +1,47 @@
+Develop a server application that trims and merges the videos transmitted via RPC communication, then demostrate it with your client application.
+
+	1. Server application
+
+	2. Trims and merge videos
+
+	3. Communication via RPC
+
+
+
+
+
+Requirements:
+the server shall be able to merges the videos from client - based on the client request - simple merge (max 2 Videos to 1 Video)
+the server shall be able to trims the video and send to client - based on the client request. 
+the server shall be able to handle multiple clients. (2 clients)
+the server shall support clients over same system or different system.
+the server shall use standardized RPC framework.
+the server shall be able to notify client incase of sever error.
+the server shall be able to recover/re-establish the transmission incase communication error.
+
+
+    Good to have:
+the server shall be able to handle multiple clients requests.
+the server shall do load balancing incase of high bandwith in the system.
+the server shall indicate clients the maximum number of client to connects, the remaining slots and performance characteristics, available Video in system
+the server shall be able to verify the authority of client.
+the server shall manage the Video storage.
+
+
+SW architectures:
+Drivers:
+- Availability
+- Scalability
+- Security
+- Performance
+
+- How to do:
+	+ Client intiate interaction with servers, invoking services (upload video, request trim or merge Video, download modified video), and check results of those request.
+	+ Server check if correct input format, authority of client => execute service
+	+ ...
+
+lib
+- ffmpeg
+- win32 sdk RPC frameworks.
+
+
